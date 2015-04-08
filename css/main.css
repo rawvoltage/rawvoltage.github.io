@@ -114,6 +114,16 @@ form h1
     float: left;
 }
 
+#main-slide p
+{
+    margin-left: 10%;
+    text-align: left;
+    height: auto;
+    width: 40%;
+    clear: both;
+    font-size: 1.6em;
+}
+
 #main-slide h2
 {
     font-size: 72px;
@@ -427,15 +437,10 @@ nav ul
     clear: both;
 }
 
-#main-slide div
-{
-    
-}
-
 #p1MButton
 {
     float: left;
-    margin: 0 0 20px 250px;
+    margin: 0 0 20px 10%;
     font-size: 2.5em;
     text-decoration: none;
     color: rgba(255, 255, 255, .9);
@@ -454,7 +459,7 @@ nav ul
 #p1Button
 {
     float: left;
-    margin: 0 0 0 250px;
+    margin: 0 0 0 10%;
     font-size: 2.5em;
     text-decoration: none;
     color: rgba(255, 255, 255, .9);
