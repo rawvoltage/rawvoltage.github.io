@@ -42,7 +42,8 @@ $(document).ready(function() {
     
     // fullpage //
     $('#fullpage').fullpage({
-        menu: true
+        menu: true,
+        controlArrows: false
     });
     // fullpage //
     // snapsvg //
