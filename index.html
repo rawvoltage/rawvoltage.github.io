@@ -35,7 +35,7 @@
         <!-- END OF HEADER END OF HEADER END OF HEADER END OF HEADER END OF HEADER END OF HEADER END OF HEADER END OF HEADER END OF HEADER -->
         
         <div id="fullpage">
-            <div class="section profile-signup">
+            <div id="profile" class="section profile-signup">
                 <div class="slide profile-signup">
                     <form class="signup">
                         <div class="signup-inner-form">
@@ -43,8 +43,9 @@
                                 sign in
                             </h1>
                             <div>
-                                <input type="text" class="signup-fields" placeholder="username/email">
-                                <input type="password" class="signup-fields" placeholder="password">
+                                <input required type="text" class="signup-fields" placeholder="username/email">
+                                <input required type="password" class="signup-fields" placeholder="password">
+                                <input type="submit" class="signup-submit">
                                 <div class="g-signin2 google-signin" data-onsuccess="onSignIn"></div>
                             </div>
                         </div>
@@ -91,7 +92,7 @@
                     <nav class="mainNav">
                         <ul>
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">Profile</a>
+                            <li><a href="#profile">Profile</a>
                                 <ul>
                                     <li><a href="#">Messages</a></li>
                                     <li><a href="#">Achievements</a></li>

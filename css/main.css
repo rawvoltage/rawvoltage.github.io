@@ -24,6 +24,11 @@ header
     margin: 0;
 }
 
+#profile
+{
+    
+}
+
 .profile
 {
     background: url(../assets/citylights.jpg);
@@ -95,6 +100,25 @@ form h1
 [placeholder]:focus::-webkit-input-placeholder
 {
     opacity: 0;
+}
+
+.signup-submit
+{
+    background: rgba(65, 190, 240, 1);
+    font-size: 
+    width: 100px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #dde2e7;
+    box-shadow: none;
+}
+
+.signup-submit:hover
+{
+    color: red;
 }
 
 .google-signin
@@ -238,20 +262,18 @@ form h1
 /****************************************************/
 #options
 {
-    font-size: 2.5vw;
-    line-height: 150px;
-    list-style-type: none;
+    font-size: 1vw;
+    line-height: 50px;
     background: rgba(255, 255, 255, 1);
     z-index: 9;
+    height: 100%;
     height: 100vh;
-    width: 30vw;
-    padding: 0;
-    text-align: left;
+    width: 200px;
     position: fixed;
     top: 0;
-    left: -45%;
+    left: -200px;
     margin: 0;
-    transition: left .6s ease;
+    transition: left .5s ease;
 }
 
 #options.open
@@ -260,7 +282,7 @@ form h1
     left: 0;
 }
 
-open
+.open
 {
     
 }
@@ -268,10 +290,9 @@ open
 .optionsContent
 {
     list-style-type: none;
-    list-style-position: inside;
     color: black;
-    margin: 100px 0 0 0;
-    padding: 0;
+    margin: 100px 0 0 0; /* reset default */
+    padding: 0; /* reset default */
     text-align: left;
 }
 
@@ -284,7 +305,6 @@ open
 {
     text-decoration: none;
     color: black;
-    width: 100%;
 }
 
 .optionsEven
