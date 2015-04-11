@@ -104,14 +104,17 @@ form h1
 
 .signup-submit
 {
+    color: white;
     background: rgba(65, 190, 240, 1);
-    font-size: 
+    font-size: 19px; 
+    font-weight: 100;
+    letter-spacing: .1em;
     width: 100px;
-    height: 40px;
+    height: 43px;
     display: block;
     margin: 0 auto;
     margin-top: 5px;
-    border-radius: 6px;
+    border-radius: 12px;
     border: 1px solid #dde2e7;
     box-shadow: none;
 }
@@ -119,6 +122,8 @@ form h1
 .signup-submit:hover
 {
     color: red;
+    transform: scale(1.05, 1.05);
+    transition: ease .5s;
 }
 
 .google-signin
