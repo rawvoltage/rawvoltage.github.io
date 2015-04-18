@@ -121,7 +121,6 @@ form h1
 
 .signup-submit:hover
 {
-    color: red;
     transform: scale(1.05, 1.05);
     transition: ease .5s;
 }
