@@ -17,15 +17,16 @@
     <body>
       <div ng-app="myApp">
            <div class="jumbotron" ng-controller="ResumeController">
-               <a href="index.html"><img src="assets/home-button.jpg" alt="Home" class="home-button"></a>
+               <a href="index.html"><img src="assets/home-button.jpg" alt="Home" title="Home" class="home-button"></a>
                 <div class="container heading">
                     <h1 class="col-sm-12 name-heading">Danny Valerio</h1>
-                    <p>Below are my skills of interest</p>
+                    <p>Currently learning web development; below are my skills of interest.</p>
                 </div>
 
                 <div class="container nav">
                     <div class="col-sm-6 learning-skill" ng-repeat="skill in skills">
-                        <a href="{{skill.link}}">Learning {{skill.name}}</a>
+                        <a href="{{skill.link}}">{{skill.name}}</a>
+                        <img ng-src="{{skill.source}}" alt="Skill Level" title="{{skill.level}}">
                         <p>{{skill.know}}</p>
                     </div>
                 </div>

@@ -28,7 +28,7 @@ header
 {
     height: 50px;
     width: 55px;
-    position: absolute;
+    position: relative;
     left: 20px;
     top: 20px;
 }
@@ -186,7 +186,13 @@ form h1
 /**************************************/
 .main-controller
 {
+    height: 10px;
+}
+
+.main-controller h1
+{
     text-align: center;
+    margin: 0;
 }
 
 .main-block
@@ -195,7 +201,7 @@ form h1
     height: auto;
     width: 90%;
     margin: 0 auto;
-    margin-top: 7%;
+    margin-top: 10px;
 }
 
 .block
@@ -269,8 +275,7 @@ form h1
     height: auto;
     border-radius: 5px;
     text-align: center;
-    margin-bottom: 2px;
-    border-bottom: 1px solid aliceblue;
+    margin-bottom: 3px;
 }
 
 .learning-skill a
