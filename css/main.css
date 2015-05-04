@@ -24,6 +24,15 @@ header
     margin: 0;
 }
 
+.home-button
+{
+    height: 50px;
+    width: 55px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
 #profile
 {
     
@@ -173,6 +182,118 @@ form h1
     margin: 0 auto;
     width: 80%;
 }
+
+/**************************************/
+.main-controller
+{
+    text-align: center;
+}
+
+.main-block
+{
+    border: 1px solid red;
+    height: auto;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 7%;
+}
+
+.block
+{
+    width: 25%;
+    height: 200px;
+    float: left;
+    position: relative;
+    background-size: cover;
+}
+
+.publisher
+{
+    position: absolute;
+    bottom: 0;
+    right: calc(45px + 1%);
+    background: orange;
+    color: black;
+    padding: 1px 10px 1px 3px;
+    border-radius: 5px;
+}
+
+.price
+{
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    background: orange;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.block p
+{
+    text-align: center;
+}
+
+.block-name
+{
+    float: left;
+    margin: 5px;
+    padding: 0 5px;
+    background: white;
+    opacity: .8;
+    border-radius: 3px;
+}
+
+/***************************************/
+.heading
+{
+    
+}
+
+.heading p
+{
+    text-align: center;
+}
+
+.name-heading
+{
+    text-align: center;
+}
+
+.learning-skill
+{
+    font-size: 17px;
+    color: aliceblue;
+    background: gray;
+    height: auto;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 2px;
+    border-bottom: 1px solid aliceblue;
+}
+
+.learning-skill a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.learning-skill p
+{
+    font-size: 14px;
+    color: aqua;
+}
+
+.portfolio
+{
+    font-size: 20px;
+    background: lightgray;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+}
+
 /****************************************************/
 /**DIM**DIM**DIM**DIM**DIM**DIM**DIM**DIM**DIM**DIM**/
 /****************************************************/
@@ -461,10 +582,17 @@ nav ul
     clear: both;
 }
 
+.explore-button
+{
+    margin: 0 auto;
+    height: 100px;
+    width: 100px;
+}
+
 #p1MButton
 {
-    float: left;
-    margin: 0 0 20px 10%;
+/*    float: left;*/
+/*    margin: 0 0 20px 10%;*/
     font-size: 2.5em;
     text-decoration: none;
     color: rgba(255, 255, 255, .9);
@@ -473,7 +601,7 @@ nav ul
     background: rgba(0, 0, 0, .3);
 }
 
-#p1MButton:after
+/*#p1MButton:after*/
 {
     content: "Explore";
     position: relative;
@@ -791,6 +919,7 @@ nav ul
         float: left;
     }
 }
+*/
 
 @media (max-width: 1080px){
     #userMenu
@@ -836,8 +965,6 @@ nav ul
         float: left;
     }
 }
-*/
-
 
 @media (max-width: 940px){
     .signup
