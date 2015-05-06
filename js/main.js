@@ -1,10 +1,4 @@
 $(document).ready(function() {
-    // fullpage //
-    $('#fullpage').fullpage({
-        menu: true,
-        controlArrows: false
-    });
-    
     for (name in app.controller);
         if(app.controller.hasOwnProperty(name)) {
             var value = data[key];
