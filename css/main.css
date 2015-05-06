@@ -24,9 +24,14 @@ form h1
     color: rgba(65, 190, 240, 1);
 }
 
+.user-pass
+{
+    font-size: 72px;
+}
+
 ::-webkit-input-placeholder
 {
-    font-size: .7em;
+    font-size: 1.3em;
     opacity: .8;
     transition: ease .65s;
 }
