@@ -20,7 +20,14 @@ app.controller('ResumeController', ['$scope', function($scope) {
                 level: 1,
                 source: '',
                 know: 'work-in-progress...',
-                link: 'server-test.html'
+                link: 'server.html'
+            },
+            {
+                name: 'Polymer',
+                level: 1,
+                source: '',
+                know: 'work-in-progress...',
+                link: 'polymerize.html'
             }
         ];
 }]);

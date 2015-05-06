@@ -1,7 +1,6 @@
 body
 {
 /*	background: rgba(246, 246, 246, .99);*/
-    background: white;
 	font-family: Roboto;
     margin: 0;
 /*    overflow: hidden;*/
@@ -14,89 +13,15 @@ body
 
 header
 {
-	width: 100%;
-	height: 100px;
 	background: rgba(246, 246, 246, .99);
-    position: absolute;
-    top: 0;
 	color: white;
 	text-align: center;
-    margin: 0;
-}
-
-.home-button
-{
-    height: 50px;
-    width: 55px;
-    position: relative;
-    left: 20px;
-    top: 20px;
-}
-
-#profile
-{
-    
-}
-
-.profile
-{
-    background: url(../assets/citylights.jpg);
-    color: white;
-}
-
-.settings
-{
-    background: url(../assets/citylights.jpg);
-    color: white;
-}
-
-.profile-signup
-{
-    background: rgba(246, 246, 246, .99);
-/*    background: red;*/
-}
-
-.signup
-{
-    background: #EDEDED;
-    opacity: .9;
-    display: block;
-    position: relative;
-    margin: 0 auto;
-    height: 45%;
-    width: 60%;
-    border: 1px solid #dde2e7;
-    border-radius: 6px;
-}
-
-.signup-inner-form
-{
-    position: relative;
-    top: calc(50% - (242px / 2));
-    clear: both;
 }
 
 form h1
 {
     text-align: center;
     color: rgba(65, 190, 240, 1);
-    position: relative;
-    top: -20px;
-}
-
-.signup-fields
-{
-    display: block;
-    margin: 0 auto;
-    margin-top: 10px;
-    padding-left: 5px;
-    height: auto;
-    width: 60%;
-    font-size: 3em;
-    text-align: left;
-    line-height: 1em;
-    border: 1px solid #dde2e7;
-    border-radius: 6px;
 }
 
 ::-webkit-input-placeholder
@@ -109,78 +34,6 @@ form h1
 [placeholder]:focus::-webkit-input-placeholder
 {
     opacity: 0;
-}
-
-.signup-submit
-{
-    color: white;
-    background: rgba(65, 190, 240, 1);
-    font-size: 19px; 
-    font-weight: 100;
-    letter-spacing: .1em;
-    width: 100px;
-    height: 43px;
-    display: block;
-    margin: 0 auto;
-    margin-top: 5px;
-    border-radius: 12px;
-    border: 1px solid #dde2e7;
-    box-shadow: none;
-}
-
-.signup-submit:hover
-{
-    transform: scale(1.05, 1.05);
-    transition: ease .5s;
-}
-
-.google-signin
-{
-    margin: 20px;
-    clear: both;
-}
-
-#main-slide h1
-{
-    font-size: 42px;
-/*    width: 80%;*/
-    margin: 30px 0 0 10%;
-    padding: 0;
-    display: inline-block;
-    clear: both;
-    float: left;
-}
-
-#main-slide p
-{
-    margin-left: 10%;
-    text-align: left;
-    height: auto;
-    width: 40%;
-    clear: both;
-    font-size: 1.6em;
-}
-
-#main-slide h2
-{
-    font-size: 72px;
-/*    display: inline;*/
-    clear: both;
-    float: left;
-    margin: 0 0 5px 10%;
-    
-}
-
-#part2 h2
-{
-    font-size: 2em;
-}
-
-#part3 h2
-{
-    font-size: 2em;
-    margin: 0 auto;
-    width: 80%;
 }
 
 /**************************************/
@@ -252,19 +105,17 @@ form h1
 }
 
 /***************************************/
-.heading
-{
-    
-}
-
 .heading p
 {
     text-align: center;
+    font-weight: normal;
+    font-size: 1.1em;
 }
 
-.name-heading
+.heading h1
 {
     text-align: center;
+    margin-bottom: 0;
 }
 
 .learning-skill
@@ -299,6 +150,10 @@ form h1
     text-align: center;
 }
 
+.jumbotron
+{
+    padding-top: 0;
+}
 /****************************************************/
 /**DIM**DIM**DIM**DIM**DIM**DIM**DIM**DIM**DIM**DIM**/
 /****************************************************/
@@ -448,124 +303,64 @@ form h1
 }
 
 /****************************************************/
-/**NAV**NAV**NAV**NAV**NAV**NAV**NAV**NAV**NAV**NAV**/
-/****************************************************/
-.mainNav
+/**NAV**NAV**NAV**NAV**NAV**NAV**NAV**NAV**NAV**NAV**
+
+nav ul li:hover > ul
 {
-/*    display: inline;*/
-    margin: 0 auto;
+    display: block;
 }
-
-nav
-{
-	margin: 100px auto; 
-	text-align: center;
-}
-
-nav ul ul
-{
-	display: none;
-}
-
-	nav ul li:hover > ul
-    {
-		display: block;
-	}
-
 
 nav ul
 {
 	background: #efefef; 
 	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
 	box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
-	padding: 0 20px;
-	border-radius: 10px;  
 	list-style: none;
-	position: relative;
 	display: inline-table;
 }
-	nav ul:after
-    {
-		content: "";
-        clear: both;
-        display: block;
-	}
+nav ul:after
+{
+    content: "";
+    clear: both;
+    display: block;
+}
 
-	nav ul li
-    {
-		float: left;
-	}
-		nav ul li:hover
-        {
-			background: #4b545f;
-			background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
-			background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
-			background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);
-		}
-			nav ul li:hover a
-            {
-				color: #fff;
-			}
+nav ul li
+{
+    float: left;
+}
+nav ul li:hover
+{
+    background: #4b545f;
+    background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
+    background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
+    background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);
+}
+nav ul li:hover a
+{
+    color: #fff;
+}
 		
-		nav ul li a
-        {
-			display: block;
-            padding: 25px 40px;
-			color: #757575;
-            text-decoration: none;
-		}
-			
-		
-	nav ul ul
-    {
-		background: #5f6975;
-        border-radius: 0px;
-        padding: 0;
-		position: absolute;
-        top: 100%;
-	}
-		nav ul ul li
-        {
-			float: none; 
-			border-top: 1px solid #6b727c;
-			border-bottom: 1px solid #575f6a;
-            position: relative;
-		}
-			nav ul ul li a
-            {
-				padding: 15px 40px;
-				color: #fff;
-			}	
-				nav ul ul li a:hover
-                {
-					background: #4b545f;
-				}
-		
-	nav ul ul ul
-    {
-		position: absolute;
-        left: 100%;
-        top:0;
-	}
-
+nav ul li a
+{
+    display: block;
+    padding: 0 20px;
+    color: #757575;
+    text-decoration: none;
+}
 /****************************************************/
 /****************************************************/
 /****************************************************/
 
 #main-slide
 {
+    background: rgba(246, 246, 246, .99);
     background: url("../assets/icymountains.jpg") no-repeat center;
 	background-size: cover;
 	color: white;
 	text-align: center;
-/*	margin: 0 auto;*/
-/*    margin-top: 100px;*/
-    margin-left: auto;
 	height: 100vh;
 	width: 100%;
-/*	min-width: 650px;*/
-    clear: both;
-/*    display: none;*/
 }
 
 .skrollP2

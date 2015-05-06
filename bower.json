@@ -1,0 +1,16 @@
+{
+  "name": "rvgh",
+  "version": "1.0.0",
+  "homepage": "https://github.com/rawvoltage/rawvoltage.github.io",
+  "authors": [
+    "Danny Valerio <misscoollex@gmail.com>"
+  ],
+  "description": "Current project using Angular, Bootstrap, Node/Express, and Polymer.",
+  "main": "[index.html, main.js, main.css]",
+  "license": "MIT",
+  "dependencies": {
+    "polymer": "Polymer/polymer#0.5",
+    "core-ajax": "Polymer/core-ajax#0.5",
+    "expandjs": "*"
+  }
+}
