@@ -1,0 +1,22 @@
+{
+  "name": "rawvoltage.github.io",
+  "version": "1.0.0",
+    "dependencies": {
+        "express": "3.3.x"
+    },
+  "description": "Main project, working with Node/Express",
+  "main": "request.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rawvoltage/rawvoltage.github.io.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rawvoltage/rawvoltage.github.io/issues"
+  },
+  "homepage": "https://github.com/rawvoltage/rawvoltage.github.io"
+}
