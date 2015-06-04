@@ -1,33 +1,28 @@
-app.controller('ResumeController', ['$scope', function($scope) {
-    $scope.skills = 
+app.controller('ResumeController', ['$scope', function ($scope) {
+    $scope.name = 'Danny Valerio';
+    $scope.number = '(347) 292-1680';
+    $scope.email = 'misscoollex@gmail.com';
+    
+    $scope.contact = 
         [
             {
-                name: 'Angular',
-                level: 2,
-                source: 'assets/full-star.png',
-                know: 'filters, ng-repeat, directives',
-                link: 'book-store.html'
-            },
-            {
-                name: 'Bootstrap',
-                level: 1,
-                source: '',
-                know: 'jumbotron, col-classes, container',
-                link: 'bootstrapper.html'
-            },
-            {
-                name: 'Node.js',
-                level: 1,
-                source: '',
-                know: 'work-in-progress...',
-                link: 'server.html'
-            },
-            {
-                name: 'Polymer',
-                level: 1,
-                source: '',
-                know: 'work-in-progress...',
-                link: 'polymerize.html'
+                name: 'Danny Valerio',
+                number: '(347) 292-1680',
+                email: 'misscoollex@gmail.com'
             }
         ];
-}]);
+    
+    $scope.field = 
+        [
+            {
+                title: 'Education',
+                location: '',
+                dates: ''
+            },
+            {
+                title: 'Experience',
+                location: '',
+                dates: ''
+            }
+        ];
+    }]);

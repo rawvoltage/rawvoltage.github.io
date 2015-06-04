@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume</title>
+    <div class="css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="css/animate.css">
+        <link rel="stylesheet" href="css/todo-list.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" href="css/resume.css">
+    </div>
+</head>
+<body>
+   <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="book-store.html">Book Store</a></li>
+            <li><a href="server.html">Server</a></li>
+        </ul>
+        <img src="assets/below-header-backdrop.svg" class="below-header">
+    </nav>
+    <div ng-app="myApp">
+        <div ng-controller="ResumeController" class="container">
+            <h2 class="center">{{name}}</h2>
+            <h4 class="center">{{number}}</h4>
+            <h5 class="center">{{email}}</h5>
+            
+            <div>
+                <h5 class="center">Education</h5>
+                <h6 class="left">JP McCaskey</h6>
+                <h6 class="right">High School Diploma</h6>
+            </div>
+        </div>
+    </div>
+    <div class="scripts">
+        <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+        <script type="text/javascript" src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+        <script type="text/javascript" src="js/keypress-2.1.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<!--            <script type="text/javascript" src="js/backbone.js"></script>-->
+        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<!--            <script type="text/javascript" src="js/skrollr.min.js"></script>-->
+<!--            <script type="text/javascript" src="js/skrollr.decks.min.js"></script>-->
+        <script type="text/javascript" src="js/fullpage.min.js"></script>
+<!--            <script type="text/javascript" src="slick/slick.min.js"></script>-->
+<!--            <script type="text/javascript" src="js/snap.svg-min.js"></script>-->
+<!--            <script type="text/javascript" src="js/p5.min.js"></script>-->
+<!--            <script type="text/javascript" src="js/p5.dom.js"></script>-->
+<!--            <script type="text/javascript" src="js/p5.sound.min.js"></script>-->
+        <script type="text/javascript" src="angular/app.js"></script>
+        <script type="text/javascript" src="angular/controller/ResumeController.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+<!--        <script type="text/javascript" src="js/request.js">♥</script>-->
+    </div>
+</body>
+</html>
