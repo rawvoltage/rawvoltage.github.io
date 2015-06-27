@@ -12,8 +12,8 @@ app.controller('SkillsetController', ['$scope', function ($scope) {
                 name: 'Materialize',
                 level: 1,
                 source: '',
-                know: '',
-                link: 'bootstrapper.html'
+                know: 'Bootsrap-like with Material design in mind',
+                link: ''
             },
             {
                 name: 'Node.js',
@@ -23,11 +23,11 @@ app.controller('SkillsetController', ['$scope', function ($scope) {
                 link: 'server.html'
             },
             {
-                name: 'Polymer',
+                name: 'SVG',
                 level: 1,
                 source: '',
-                know: 'work-in-progress...',
-                link: 'polymerize.html'
+                know: 'Animations (as seen above)',
+                link: 'index.html'
             }
         ];
 }]);

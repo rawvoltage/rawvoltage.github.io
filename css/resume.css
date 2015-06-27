@@ -1,5 +1,95 @@
-.below-header {
+h2 {
+    margin-top: 70px;
+}
+
+.clear-left {
+    clear: left;
+}
+
+.bold-italic {
+    font-style: italic;
+}
+.svg-name-first {
     position: relative;
-    z-index: -1;
-    width: 100vw;
+    top: 20px;
+    width: 270px;
+    margin: 0 auto;
+}
+
+.svg-name-last {
+    position: relative;
+    top: 45px;
+    width: 350px;
+    margin: 0 auto;
+}
+
+.animate-name {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: dash 1s ease-in 0s forwards;
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 500;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+svg {
+    margin: -10px;
+}
+
+.d-name {
+    animation-delay: .1s;
+}
+
+.a-name {
+    animation-delay: .5s;
+}
+
+.n-name {
+    animation-delay: .9s;
+}
+
+.n2-name {
+    animation-delay: 1.3s;
+}
+
+.y-name {
+    animation-delay: 1.6s;
+}
+
+.v-name {
+    animation-delay: 2s;
+}
+
+.a2-name {
+    animation-delay: 2.3s;
+}
+
+.l-name {
+    animation-delay: 2.6s;
+}
+
+.e-name {
+    animation-delay: 2.8s;
+}
+
+.r-name {
+    animation-delay: 3s;
+}
+
+.i-name {
+    animation-delay: 3.2s;
+}
+
+.i-name-svg {
+    margin: -10px -25px;
+}
+
+.o-name {
+    animation-delay: 3.4s;
 }

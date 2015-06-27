@@ -1,28 +1,19 @@
 app.controller('ResumeController', ['$scope', function ($scope) {
-    $scope.name = 'Danny Valerio';
-    $scope.number = '(347) 292-1680';
-    $scope.email = 'misscoollex@gmail.com';
-    
-    $scope.contact = 
-        [
-            {
-                name: 'Danny Valerio',
-                number: '(347) 292-1680',
-                email: 'misscoollex@gmail.com'
-            }
-        ];
-    
     $scope.field = 
         [
             {
-                title: 'Education',
-                location: '',
-                dates: ''
+                field: 'Education',
+                title: 'JP McCaskey',
+                location: 'Lancaster, PA',
+                dates: '2005-2009',
+                degree: 'High School Diploma'
             },
             {
-                title: 'Experience',
-                location: '',
-                dates: ''
+                field: 'Experience',
+                title: 'General Assembly',
+                location: 'New York, NY',
+                dates: '2014-2015',
+                degree: 'Front-end Web Development Certificate'
             }
         ];
     }]);

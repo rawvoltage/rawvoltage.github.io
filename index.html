@@ -1,75 +1,137 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Website Template</title>
-        <div class="meta">
-            <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            <meta name="google-signin-client_id" content="215711565630-0lioh4gg3quoek0vaal9p8tp74g16t12.apps.googleusercontent.com">
-        </div>
-        <div class="icons">
-            <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHV3Z/x1d2v8AAAAqAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACRi2/8kYtz/AAAAKgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqY9X/KmTW/wAAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjAAAALAAAACwAAAAsLWnd/y1q3v8AAAAxAAAALAAAACwAAAAsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALWrY/zBw4/8wcOT/MHHk/zFz6P8xc+j/MHHl/zBw5P8wcOT/LmvZ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADR02/82eub/Nnrn/zd76P84fez/OH7t/zd76P82euf/Nnrm/zR13f8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQIrs/0GK7f8AAAAqAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEiX7v9Jl+//AAAAKgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABRpPH/UqTy/wAAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVqnp/1ap6f8AAAAhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AAD//wAA/n8AAP5/AAD+fwAA/n8AAOAHAADgBwAA/n8AAP5/AAD+fwAA/n8AAP//AAD//wAA//8AAA==" rel="icon" type="image/x-icon" />
-        </div>
-        <div class="fonts">
-            <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700' rel='stylesheet' type='text/css'>
-        </div>
-        <div class="imports">
-            <link rel="import" href="elements/my-element.html">
-        </div>
-        <div class="css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
-            <link rel="stylesheet" type="text/css" href="css/animate.css">
-            <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
-            <link rel="stylesheet" type="text/css" href="css/fullpage.css">
-            <link rel="stylesheet" type="text/css" href="slick/slick.css">
-            <link rel="stylesheet" type="text/css" href="css/main.css">
-        </div>
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
-	</head>
-    <body ng-app="myApp">
-      <div>
-           <div ng-controller="SkillsetController">
-               <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="book-store.html">Book Store</a></li>
-                        <li><a href="server.html">Server</a></li>
-                    </ul>
-                </nav>
-                <div class="container heading">
-                    <h1 class="col-sm-12">Danny Valerio</h1>
-                    <p>Currently learning web development; below are my skills of interest.</p>
-                </div>
+<html lang="en">
+<head>
+    <title>Danny Valerio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="google-signin-client_id" content="215711565630-0lioh4gg3quoek0vaal9p8tp74g16t12.apps.googleusercontent.com">
+    
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+    <link rel="stylesheet" href="css/todo-list.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="css/resume.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    
+    <link rel="import" href="elements/my-element.html">   
+        
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
-                <div class="container">
-                    <div class="card-panel teal lighten-2 learning-skill" ng-repeat="skill in skills">
-                        <a href="{{skill.link}}">{{skill.name}}</a>
-<!--                        <img ng-src="{{skill.source}}" alt="Skill Level" title="{{skill.level}}">-->
-                        <p>{{skill.know}}</p>
-                    </div>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHV3Z/x1d2v8AAAAqAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACRi2/8kYtz/AAAAKgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqY9X/KmTW/wAAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjAAAALAAAACwAAAAsLWnd/y1q3v8AAAAxAAAALAAAACwAAAAsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALWrY/zBw4/8wcOT/MHHk/zFz6P8xc+j/MHHl/zBw5P8wcOT/LmvZ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADR02/82eub/Nnrn/zd76P84fez/OH7t/zd76P82euf/Nnrm/zR13f8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQIrs/0GK7f8AAAAqAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEiX7v9Jl+//AAAAKgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABRpPH/UqTy/wAAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVqnp/1ap6f8AAAAhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AAD//wAA/n8AAP5/AAD+fwAA/n8AAOAHAADgBwAA/n8AAP5/AAD+fwAA/n8AAP//AAD//wAA//8AAA==" rel="icon" type="image/x-icon" />
+</head>
+<body>
+   <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="book-store.html">Book Store</a></li>
+            <li><a href="server.html">Server</a></li>
+        </ul>
+    </nav>
+    <div ng-app="myApp">
+        <div ng-controller="ResumeController" class="container">
+            <div class="svg-name-first">
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 108.956 165.03966">
+                    <path class="animate-name d-name" d="M206.813 544.6l-.85 77.317-.852 77.32s90.436 8.88 97.713-57.86c4.787-43.905-.948-100.586-100.02-96.78z" transform="translate(-200.06 -539.597)" fill="none" stroke="#000" stroke-width="10"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 108.956 165.03966">
+                    <path class="animate-name a-name" d="M1.98 163.06L52.925 1.81l53.914 161.746M24.237 92.33l58.86.494" fill="none" stroke="#000" stroke-width="10"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 108.956 165.03966">
+                    <path class="animate-name n-name" d="M5.44 165.04V30.5l92.497 120 0-140" fill="none" stroke="#000" stroke-width="10"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 108.956 165.03966">
+                    <path class="animate-name n2-name" d="M5.44 165.04V30.5l92.497 120 0-140" fill="none" stroke="#000" stroke-width="10"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 108.956 165.03966">
+                    <path class="animate-name y-name" d="M4.2 4.163l52.436 69.815 47.12-69.327M56.643 73.162l-.196 98.928" fill="none" stroke="#000" stroke-width="10"/>
+                </svg>
+            </div>
+            <div class="svg-name-last">
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 108.956 165.03966">
+                    <path class="animate-name v-name" d="M4.07 6.625l51.82 152.863L89.734 52.222l14.27-45.227" fill="none" stroke="#000" stroke-width="10"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 108.956 165.03966">
+                    <path class="animate-name a2-name" d="M1.98 163.06L52.925 1.81l53.914 161.746M24.237 92.33l58.86.494" fill="none" stroke="#000" stroke-width="10"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 108.956 165.03966">
+                    <path class="animate-name l-name" d="M6.292 6.255v152.863h94.753" fill="none" stroke="#000" stroke-width="10"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 108.956 165.03966">
+                    <path class="animate-name e-name" d="M97.344 5.884H7.404v153.234l89.57.74M7.773 79.17H60.7" fill="none" stroke="#000" stroke-width="10"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 108.956 165.03966">
+                    <path class="animate-name r-name" d="M9.253 159.858l-.37-148.052c31.895.568 63.4-2.07 73.647 7.432 16.26 15.076 17.666 36.156 1.28 52.008C72.827 81.87 41.842 83.876 9.993 79.54" fill="none" stroke="#000" stroke-width="10"/>
+                    <path class="animate-name r-name" d="M10.364 79.17l44.463 40.98 43.627 40.448" fill="none" stroke="#000" stroke-width="10"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 108.956 165.03966" class="i-name-svg">
+                    <path class="animate-name i-name" d="M52.558 43.638v116.96" fill="none" stroke="#000" stroke-width="10"/>
+                    <path class="animate-name i-name" d="M55.246 32.17c-4.19 1.522-8.966-.706-10.49-4.897-1.523-4.19.705-8.966 4.896-10.49 4.19-1.523 8.966.705 10.49 4.896 1.523 4.19-.705 8.965-4.896 10.49" transform="matrix(.56755 0 0 .61033 22.682 14.083)" fill="none" stroke="#000" stroke-width="16.991"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 108.956 165.03966">
+                    <path class="animate-name o-name" d="M26.4 45.573c22.08-15.253 53.28-9.546 68.533 12.533 15.253 22.08 9.547 53.28-12.533 68.534-22.08 15.252-53.28 9.546-68.533-12.534S4.32 60.826 26.4 45.573" transform="matrix(.97422 0 0 1.1666 1.27 -17.28)" fill="none" stroke="#000" stroke-width="10"/>
+                </svg>
+            </div>
+            <h2 class="center">
+                <a href="tel:3472921680">(347)-292-1680</a>
+            </h2>
+            <h3 class="center">
+                <a href="mailto:misscoollex@gmail.com">misscoollex@gmail.com</a>
+            </h3>
+
+            <div class="container">
+                <h4 class="center">Education</h4>
+                <div>
+                    <h5 class="left">JP McCaskey</h5>
+                    <h5 class="right">2005-2009</h5>
+                </div>
+                <div class="clear-left">
+                    <h6 class="left clear-left bold-italic">High School Diploma</h6>
+                    <h6 class="right">Lancaster, PA</h6>
+                </div>
+                <div class="clear-left">
+                    <h5 class="left">General Assembly</h5>
+                    <h5 class="right">2014-2015</h5>
+                </div>
+                <div class="clear-left">
+                    <h6 class="left clear-left bold-italic">Front-end Web Development Certificate</h6>
+                    <h6 class="right">New York, NY</h6>
+                    <ul class="clear-left">
+                        <li>
+                            -Developing responsive and interactive websites using HTML, CSS, JavaScript and JQuery
+                        </li>
+                        <li>
+                            -Selectively utilizing and repurposing website templates to reduce build time of high-quality responsive sites
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>        
-        <div class="scripts">
-            <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
-            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-            <script type="text/javascript" src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<!--            <script type="text/javascript" src="js/backbone.js"></script>-->
-            <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-<!--            <script type="text/javascript" src="js/skrollr.min.js"></script>-->
-<!--            <script type="text/javascript" src="js/skrollr.decks.min.js"></script>-->
-            <script type="text/javascript" src="js/fullpage.min.js"></script>
-<!--            <script type="text/javascript" src="slick/slick.min.js"></script>-->
-<!--            <script type="text/javascript" src="js/snap.svg-min.js"></script>-->
-<!--            <script type="text/javascript" src="js/p5.min.js"></script>-->
-<!--            <script type="text/javascript" src="js/p5.dom.js"></script>-->
-<!--            <script type="text/javascript" src="js/p5.sound.min.js"></script>-->
-            <script type="text/javascript" src="angular/app.js"></script>
-            <script type="text/javascript" src="angular/controller/SkillsetController.js"></script>
-            <script type="text/javascript" src="js/main.js"></script>
-            <script type="text/javascript" src="js/request.js">♥</script>
         </div>
-    </body>
+        <div ng-controller="SkillsetController">
+            <div class="container heading">
+                <p>Below are my skills of interest.</p>
+            </div>
+
+            <div class="container" ng-controller="SkillsetController">
+                <div class="card-panel teal lighten-2 learning-skill" ng-repeat="skill in skills">
+                    <a href="{{skill.link}}">{{skill.name}}</a>
+<!--                        <img ng-src="{{skill.source}}" alt="Skill Level" title="{{skill.level}}">-->
+                    <p>{{skill.know}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scripts">
+        <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+        <script type="text/javascript" src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="angular/app.js"></script>
+        <script type="text/javascript" src="angular/controller/ResumeController.js"></script>
+        <script type="text/javascript" src="angular/controller/SkillsetController.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+<!--        <script type="text/javascript" src="js/request.js">♥</script>-->
+    </div>
+</body>
 </html>
