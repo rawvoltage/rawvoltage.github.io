@@ -13,14 +13,14 @@ app.controller('SkillsetController', ['$scope', function ($scope) {
                 level: 1,
                 source: '',
                 know: 'Bootsrap-like with Material design in mind',
-                link: ''
+                link: 'index.html'
             },
             {
                 name: 'Node.js',
                 level: 1,
                 source: '',
                 know: 'work-in-progress...',
-                link: 'server.html'
+                link: 'index.html'
             },
             {
                 name: 'SVG',

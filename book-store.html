@@ -15,7 +15,6 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="book-store.html">Book Store</a></li>
-                <li><a href="server.html">Server</a></li>
             </ul>
         </nav>
         <div ng-controller="MainController" class="main-controller">
@@ -23,7 +22,8 @@
                 {{title}}
             </h1>
             <div class="main-block container">
-                <div class="block" ng-repeat="block in blocks" ng-style="{'background': 'url({{block.icon}})'}">
+               <h4>Created using Angular</h4>
+                <div class="block" ng-repeat="block in blocks" ng-style="{'background-image': 'url({{block.icon}})'}">
                     <p class="block-name">
                         {{block.name}}
                     </p>
