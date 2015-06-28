@@ -12,7 +12,7 @@ app.controller('SkillsetController', ['$scope', function ($scope) {
                 name: 'Materialize',
                 level: 1,
                 source: '',
-                know: 'Bootsrap-like with Material design in mind',
+                know: 'Bootstrap-like with Material design in mind',
                 link: 'index.html'
             },
             {
