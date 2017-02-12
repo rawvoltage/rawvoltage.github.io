@@ -8,13 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-signin-client_id" content="215711565630-0lioh4gg3quoek0vaal9p8tp74g16t12.apps.googleusercontent.com">
 
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700' rel='stylesheet' type='text/css'>
+    <!--    <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700' rel='stylesheet' type='text/css'>-->
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
-    <link rel="stylesheet" href="css/todo-list.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--bower:css-->
+    <link rel="stylesheet" href="bower_components/Materialize/bin/materialize.css" />
+    <!--endbower-->
+
+    <!--inject:css-->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/main-sass.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/resume.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="css/todo-list.css">
+    <!--endinject-->
+
 
     <link rel="import" href="elements/my-element.html">
 
@@ -24,75 +32,102 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="book-store.html">Book Store</a></li>
-        </ul>
-    </nav>
     <div ng-app="myApp">
         <div ng-controller="ResumeController" class="container">
-            <h1 class="left clear">
-                Hello
-            </h1>
-            <h2 class="left">
-                I'm Danny Valerio
-            </h2>
-            <h3 class="center">
-                <a href="mailto:misscoollex@gmail.com">misscoollex@gmail.com</a>
-            </h3>
+            <header>
+                <h1>danny valerio</h1>
 
-            <div class="container">
-                <h4 class="center">Education</h4>
+                <div class="social">
+                    <a href="mailto:misscoollex@gmail.com" class="email">
+                        <img src="/assets/email.png" title="email" alt="email">
+                    </a>
+                    <a href="https://instagram.com/raw.voltage" class="instagram">
+                        <img src="/assets/instagram.png" title="instagram" alt="instagram">
+                    </a>
+                </div>
+
+            </header>
+
+            <section class="experience">
+                <h3>Experience</h3>
                 <div>
-                    <h5 class="left">JP McCaskey</h5>
-                    <h5 class="right">2005-2009</h5>
-                </div>
-                <div class="clear-left">
-                    <h6 class="left clear-left bold-italic">High School Diploma</h6>
-                    <h6 class="right">Lancaster, PA</h6>
-                </div>
-                <div class="clear-left">
-                    <h5 class="left">General Assembly</h5>
-                    <h5 class="right">2014-2015</h5>
-                </div>
-                <div class="clear-left">
-                    <h6 class="left clear-left bold-italic">Front-end Web Development Certificate</h6>
-                    <h6 class="right">New York, NY</h6>
-                    <ul class="clear-left">
-                        <li>
-                            -Developing responsive and interactive websites using HTML, CSS, JavaScript and JQuery
-                        </li>
-                        <li>
-                            -Selectively utilizing and repurposing website templates to reduce build time of high-quality responsive sites
-                        </li>
+                    <h6>Jan 2014 - Jan 2015</h6>
+                    <h5>CVS Health - <span>Clerk/cashier</span></h5>
+                    <ul>
+                        <li>ACO Specialist, Pharmacy tech, Photo tech, Cashier, Freight receiving/stocking.</li>
+                        <li>Responsible for training new employees</li>
                     </ul>
                 </div>
-            </div>
-        </div>
-        <div ng-controller="SkillsetController">
-            <div class="container heading">
-                <p>Below are my skills of interest.</p>
-            </div>
 
-            <div class="container" ng-controller="SkillsetController">
-                <div class="card-panel teal lighten-2 learning-skill" ng-repeat="skill in skills">
-                    <a href="{{skill.link}}">{{skill.name}}</a>
-                    <!--                        <img ng-src="{{skill.source}}" alt="Skill Level" title="{{skill.level}}">-->
-                    <p>{{skill.know}}</p>
+                <div>
+                    <h6>Jul 2013 - Nov 2014</h6>
+                    <h5>C-Town Supermarket - <span>Clerk/cashier</span></h5>
+                    <ul>
+                        <li>Handling the cash register</li>
+                        <li>Setting up store displays</li>
+                        <li>Managed shelf stocking and pricing activities</li>
+                    </ul>
                 </div>
-            </div>
+
+                <div>
+                    <h6>Dec 2012 - Jul 2013</h6>
+                    <h5>McDonalds - <span>Crew Member</span></h5>
+                    <ul>
+                        <li>Providing customer service at cash register</li>
+                        <li>Handling the grill and preparing the food.</li>
+                        <li>Janitorial work; cleaning the grill after every use, sweeping/mopping the floors, cleaning work area, dishwashing</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="education">
+                <h3>Education</h3>
+                <h6>April 2010 - June 2012</h6>
+                <h5>HACC Community College - <span>Psychology Associates</span></h5>
+                <h6>Nov 2014 - Feb 2015</h6>
+                <h5>General Assembly - <span>Front-end Web Development Certificate</span></h5>
+            </section>
         </div>
     </div>
-    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-    <script type="text/javascript" src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="angular/app.js"></script>
-    <script type="text/javascript" src="angular/controller/ResumeController.js"></script>
-    <script type="text/javascript" src="angular/controller/SkillsetController.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <!--        <script type="text/javascript" src="js/request.js">♥</script>-->
+
+
+    <nav>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#!">First Sidebar Link</a></li>
+            <li><a href="#!">Second Sidebar Link</a></li>
+        </ul>
+        <ul id="slide-out" class="side-nav">
+            <li><a href="#!">First Sidebar Link</a></li>
+            <li><a href="#!">Second Sidebar Link</a></li>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    </nav>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="book-store.html">Book Store</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <!--bower:js-->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/Materialize/bin/materialize.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <!--endbower-->
+
+    <!--inject:js-->
+    <script src="production/index.min.js"></script>
+    <script src="production/main.min.js"></script>
+    <script src="production/my_parser.min.js"></script>
+    <script src="production/parser.min.js"></script>
+    <script src="production/phasing.min.js"></script>
+    <script src="production/polymerize.min.js"></script>
+    <script src="production/request.min.js"></script>
+    <!--endinject-->
 </body>
 
 </html>

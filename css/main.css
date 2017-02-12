@@ -1,61 +1,72 @@
-body
-{
-/*	background: rgba(246, 246, 246, .99);*/
-	font-family: Roboto;
-    margin: 0;
-/*    overflow: hidden;*/
+::-webkit-scrollbar {
+    display: none;
 }
 
-::-webkit-scrollbar
-{ 
-    display: none; 
-}
-
-h4 {
-    text-align: center;
-}
-form h1
-{
+form h1 {
     text-align: center;
     color: rgba(65, 190, 240, 1);
 }
 
-.user-pass
-{
+.user-pass {
     font-size: 72px;
 }
 
-::-webkit-input-placeholder
-{
+::-webkit-input-placeholder {
     font-size: 1.3em;
     opacity: .8;
     transition: ease .65s;
 }
 
-[placeholder]:focus::-webkit-input-placeholder
-{
+[placeholder]:focus::-webkit-input-placeholder {
     opacity: 0;
 }
 
+
 /**************************************/
-.main-controller
-{
+/* main elements */
+/**************************************/
+body {
+    	background: rgba(246, 246, 246, .99);
+/*    font-family: Lato;*/
+    margin: 0;
+    /*    overflow: hidden;*/
+}
+
+h1 {
+    text-align: center;
+}
+
+
+/**************************************/
+/* classes */
+/**************************************/
+.social {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.email img {
+    height: 24px;
+}
+
+.instagram img {
+    height: 24px;
+}
+.main-controller {
     height: 10px;
 }
 
-.main-controller h1
-{
+.main-controller h1 {
     text-align: center;
     margin: 0;
 }
 
-.main-block
-{
+.main-block {
     margin-top: 10px;
 }
 
-.block
-{
+.block {
     min-width: 300px;
     height: 200px;
     margin: 1px;
@@ -64,8 +75,7 @@ form h1
     background-size: cover;
 }
 
-.publisher
-{
+.publisher {
     position: absolute;
     bottom: 0;
     right: calc(45px + 1%);
@@ -75,8 +85,7 @@ form h1
     border-radius: 5px;
 }
 
-.price
-{
+.price {
     position: absolute;
     bottom: 1%;
     right: 1%;
@@ -87,13 +96,11 @@ form h1
     height: 50px;
 }
 
-.block p
-{
+.block p {
     text-align: center;
 }
 
-.block-name
-{
+.block-name {
     float: left;
     margin: 5px;
     padding: 0 5px;
@@ -102,22 +109,21 @@ form h1
     border-radius: 3px;
 }
 
+
 /***************************************/
-.heading p
-{
+
+.heading p {
     text-align: center;
     font-weight: normal;
     font-size: 1.1em;
 }
 
-.heading h1
-{
+.heading h1 {
     text-align: center;
     margin-bottom: 0;
 }
 
-.learning-skill
-{
+.learning-skill {
     font-size: 17px;
     color: aliceblue;
     background: gray;
@@ -127,20 +133,17 @@ form h1
     margin-bottom: 3px;
 }
 
-.learning-skill a
-{
+.learning-skill a {
     text-decoration: none;
     color: white;
 }
 
-.learning-skill p
-{
+.learning-skill p {
     font-size: 14px;
     color: aqua;
 }
 
-.portfolio
-{
+.portfolio {
     font-size: 20px;
     background: lightgray;
     height: 40px;
@@ -148,19 +151,17 @@ form h1
     text-align: center;
 }
 
-.jumbotron
-{
+.jumbotron {
     padding-top: 0;
 }
 
-#main-slide
-{
+#main-slide {
     background: rgba(246, 246, 246, .99);
     background: url("../assets/icymountains.jpg") no-repeat center;
-	background-size: cover;
-	color: white;
-	text-align: center;
-	height: 100vh;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    height: 100vh;
     background: url("../assets/mac.jpg") no-repeat center;
     background-size: cover;
     height: 35vh;
@@ -170,12 +171,17 @@ form h1
     margin: 10px;
 }
 
-.test-frame {
-    
-}
+.test-frame {}
+
+
 /****************************************************/
+
+
 /**MEDIA QUERY*MEDIA QUERY*MEDIA QUERY*MEDIA QUERY***/
+
+
 /****************************************************/
+
 
 /*
 @media (max-width: 1560px){    
@@ -249,28 +255,21 @@ form h1
 }
 */
 
-@media (max-width: 1080px){
-    #userMenu
-    {
+@media (max-width: 1080px) {
+    #userMenu {
         right: 10px;
     }
-    
-    #settings
-    {
+    #settings {
         right: 0;
     }
-    
-    .contentP1
-    {
+    .contentP1 {
         color: white;
         font-size: 1.1em;
         line-height: 25px;
         width: 40%;
         margin: 0 0 0 90px;
     }
-    
-    .latestWork1
-    {
+    .latestWork1 {
         color: pink;
         font-size: 1.2em;
         text-align: left;
@@ -280,9 +279,7 @@ form h1
         height: 70%;
         float: left;
     }
-
-    .latestWork2
-    {
+    .latestWork2 {
         color: white;
         font-size: 1.2em;
         text-align: left;
@@ -294,19 +291,15 @@ form h1
     }
 }
 
-@media (max-width: 940px){
-    .block
-    {
+@media (max-width: 940px) {
+    .block {
         clear: right;
         min-width: 300px;
     }
-    .signup
-    {
+    .signup {
         width: 90%;
     }
-    
-    .signup-fields
-    {
+    .signup-fields {
         display: block;
         margin: 0 auto;
         margin-top: 10px;
@@ -319,31 +312,24 @@ form h1
         border: 1px solid #dde2e7;
         border-radius: 6px;
     }
-    
-    #main-slide h1
-    {
+    #main-slide h1 {
         float: left;
         display: inline;
         margin: 35px 0 0 30px;
     }
-    
-    #main-slide h2
-    {
+    #main-slide h2 {
         float: left;
         display: inline;
         margin-left: 30px;
     }
-    
-/*    #main-slide p*/
+    /*    #main-slide p*/
     {
         color: red;
         font-size: 1.1em;
         line-height: 25px;
         width: 80%;
     }
-    
-    #main-slide div
-    {
+    #main-slide div {
         color: white;
         font-size: 1.4vw;
         line-height: 27px;
@@ -353,9 +339,7 @@ form h1
         margin: 0 auto;
         clear: both;
     }
-    
-    #main-slide p
-    {
+    #main-slide p {
         color: white;
         font-size: calc(2.4vw + .2vw);
         line-height: 27px;
@@ -365,9 +349,7 @@ form h1
         height: auto;
         clear: both;
     }
-    
-    .latestWork1
-    {
+    .latestWork1 {
         color: pink;
         font-size: 1.2em;
         text-align: left;
@@ -377,9 +359,7 @@ form h1
         height: 70%;
         float: left;
     }
-
-    .latestWork2
-    {
+    .latestWork2 {
         color: white;
         font-size: 1.2em;
         text-align: left;
@@ -390,6 +370,7 @@ form h1
         float: left;
     }
 }
+
 
 /*
 @media (max-width: 720px){

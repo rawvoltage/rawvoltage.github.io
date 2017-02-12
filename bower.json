@@ -9,8 +9,8 @@
   "main": "[index.html, main.js, main.css]",
   "license": "MIT",
   "dependencies": {
-    "polymer": "Polymer/polymer#0.5",
-    "core-ajax": "Polymer/core-ajax#0.5",
-    "expandjs": "*"
+    "bootstrap": "^3.3.6",
+    "Materialize": "materialize#^0.97.5",
+    "angular": "^1.5.0"
   }
 }

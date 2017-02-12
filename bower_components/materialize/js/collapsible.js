@@ -1,4 +1,4 @@
-(function ($) {
+  (function ($) {
   $.fn.collapsible = function(options) {
     var defaults = {
         accordion: undefined
@@ -16,7 +16,7 @@
       var collapsible_type = $this.data("collapsible");
 
       // Turn off any existing event handlers
-       $this.off('click.collapse', '.collapsible-header');
+       $this.off('click.collapse', '> li > .collapsible-header');
        $panel_headers.off('click.collapse');
 
 
@@ -34,10 +34,10 @@
             object.parent().removeClass('active');
         }
         if (object.parent().hasClass('active')){
-          object.siblings('.collapsible-body').stop(true,false).slideDown({ duration: 350, easing: "easeOutQuart", queue: false, complete: function() {$(this).css('height', '')}});
+          object.siblings('.collapsible-body').stop(true,false).slideDown({ duration: 350, easing: "easeOutQuart", queue: false, complete: function() {$(this).css('height', '');}});
         }
         else{
-          object.siblings('.collapsible-body').stop(true,false).slideUp({ duration: 350, easing: "easeOutQuart", queue: false, complete: function() {$(this).css('height', '')}});
+          object.siblings('.collapsible-body').stop(true,false).slideUp({ duration: 350, easing: "easeOutQuart", queue: false, complete: function() {$(this).css('height', '');}});
         }
 
         $panel_headers.not(object).removeClass('active').parent().removeClass('active');
@@ -48,7 +48,7 @@
             queue: false,
             complete:
               function() {
-                $(this).css('height', '')
+                $(this).css('height', '');
               }
           });
       }
@@ -62,10 +62,10 @@
             object.parent().removeClass('active');
         }
         if (object.parent().hasClass('active')){
-          object.siblings('.collapsible-body').stop(true,false).slideDown({ duration: 350, easing: "easeOutQuart", queue: false, complete: function() {$(this).css('height', '')}});
+          object.siblings('.collapsible-body').stop(true,false).slideDown({ duration: 350, easing: "easeOutQuart", queue: false, complete: function() {$(this).css('height', '');}});
         }
         else{
-          object.siblings('.collapsible-body').stop(true,false).slideUp({ duration: 350, easing: "easeOutQuart", queue: false, complete: function() {$(this).css('height', '')}});
+          object.siblings('.collapsible-body').stop(true,false).slideUp({ duration: 350, easing: "easeOutQuart", queue: false, complete: function() {$(this).css('height', '');}});
         }
       }
 
@@ -95,38 +95,36 @@
 
 
 
-      if (options.accordion || collapsible_type == "accordion" || collapsible_type == undefined) { // Handle Accordion
-        // Add click handler to only direct collapsible header children
-        $panel_headers = $this.find('> li > .collapsible-header');
-        $panel_headers.on('click.collapse', function (e) {
-          var element = $(e.target);
+      // Add click handler to only direct collapsible header children
+      $this.on('click.collapse', '> li > .collapsible-header', function(e) {
+        var $header = $(this),
+            element = $(e.target);
 
-          if (isChildrenOfPanelHeader(element)) {
-            element = getPanelHeader(element);
-          }
+        if (isChildrenOfPanelHeader(element)) {
+          element = getPanelHeader(element);
+        }
 
-          element.toggleClass('active');
+        element.toggleClass('active');
+
+        if (options.accordion || collapsible_type === "accordion" || collapsible_type === undefined) { // Handle Accordion
           accordionOpen(element);
-        });
-        // Open first active
+        } else { // Handle Expandables
+          expandableOpen(element);
+
+          if ($header.hasClass('active')) {
+            expandableOpen($header);
+          }
+        }
+      });
+
+      // Open first active
+      var $panel_headers = $this.find('> li > .collapsible-header');
+      if (options.accordion || collapsible_type === "accordion" || collapsible_type === undefined) { // Handle Accordion
         accordionOpen($panel_headers.filter('.active').first());
       }
       else { // Handle Expandables
-        $panel_headers.each(function () {
-          // Add click handler to only direct collapsible header children
-          $(this).on('click.collapse', function (e) {
-            var element = $(e.target);
-            if (isChildrenOfPanelHeader(element)) {
-              element = getPanelHeader(element);
-            }
-            element.toggleClass('active');
-            expandableOpen(element);
-          });
-          // Open any bodies that have the active class
-          if ($(this).hasClass('active')) {
-            expandableOpen($(this));
-          }
-
+        $panel_headers.filter('.active').each(function() {
+          expandableOpen($(this));
         });
       }
 

@@ -1,85 +1,85 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Website Template</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <div class="fonts">
-            <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700' rel='stylesheet' type='text/css'>
+
+<head>
+    <title>Website Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <div class="fonts">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700' rel='stylesheet' type='text/css'>
+    </div>
+    <div class="imports">
+        <link rel="import" href="elements/my-element.html">
+        <link rel="import" href="elements/todo-list.html">
+    </div>
+    <!--bower:css-->
+    <link rel="stylesheet" href="bower_components/Materialize/bin/materialize.css" />
+    <!--endbower-->
+
+    <!--inject:css-->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/main-sass.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/resume.css">
+    <link rel="stylesheet" href="css/todo-list.css">
+    <!--endinject-->
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="book-store.html">Book Store</a></li>
+            <li><a href="server.html">Server</a></li>
+        </ul>
+    </nav>
+    <div ng-app="myApp">
+        <div ng-controller="TodoController" class="container">
+            <form action="">
+                <ul class="collection with-header row todo-list">
+                    <li class="collection-header col s8 l10">
+                        <input type="text" name="" class="new-todo-field">
+                    </li>
+                    <li class="collection-item col s4 submit-container">
+                        <input type="button" class="btn submit-button" value="SUBMIT">
+                    </li>
+                    <li class="collection-item col s12 todo todo-footer">
+                        test
+                    </li>
+                </ul>
+            </form>
         </div>
-        <div class="imports">
-            <link rel="import" href="elements/my-element.html">
-            <link rel="import" href="elements/todo-list.html">
-        </div>
-        <div class="css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
-            <link rel="stylesheet" type="text/css" href="css/animate.css">
-            <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
-            <link rel="stylesheet" type="text/css" href="css/fullpage.css">
-            <link rel="stylesheet" type="text/css" href="slick/slick.css">
-            <link rel="stylesheet" href="css/todo-list.css">
-            <link rel="stylesheet" type="text/css" href="css/main.css">
-        </div>
-	</head>
-    <body>
-       <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="book-store.html">Book Store</a></li>
-                <li><a href="server.html">Server</a></li>
-            </ul>
-        </nav>
-        <div ng-app="myApp">
-            <div ng-controller="TodoController" class="container">
-               <form action="">
-                    <ul class="collection with-header row todo-list">
-                        <li class="collection-header col s8 l10">
-                            <input type="text" name="" class="new-todo-field">
-                        </li>
-                        <li class="collection-item col s4 submit-container">
-                            <input type="button" class="btn submit-button" value="SUBMIT">
-                        </li>
-                        <li class="collection-item col s12 todo todo-footer">
-                            test
-                        </li>
-                    </ul>
-                </form>
-            </div>
-        </div>
-        
-        <div class="test-hover-effect"></div>
-        
-        <svg width="100" height="100">
-            <circle id="svg-animate" cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow">
-                <animate attributeType="CSS" attributeName="r" from="" to="0" dur="1.5s" repeatCount="0" begin="click" fill="freeze"/>
-            </circle>
-        </svg>
-        
-        <svg width="500" height="210">
-            <polygon points="100,100 200,200 0,40 0,40" style="fill:lime; stroke: purple; stroke-wdith: 1">
-                <animate dur="500ms" attributeName="points" from="200,10 250,190 160,210" to="150,150 200,190 200,200" repeatCount="0" begin="click" fill="freeze"/>
-            </polygon>
-        </svg>
-        
-        <div class="scripts">
-            <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
-            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-            <script type="text/javascript" src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
-            <script type="text/javascript" src="js/keypress-2.1.0.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<!--            <script type="text/javascript" src="js/backbone.js"></script>-->
-            <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-<!--            <script type="text/javascript" src="js/skrollr.min.js"></script>-->
-<!--            <script type="text/javascript" src="js/skrollr.decks.min.js"></script>-->
-            <script type="text/javascript" src="js/fullpage.min.js"></script>
-<!--            <script type="text/javascript" src="slick/slick.min.js"></script>-->
-<!--            <script type="text/javascript" src="js/snap.svg-min.js"></script>-->
-<!--            <script type="text/javascript" src="js/p5.min.js"></script>-->
-<!--            <script type="text/javascript" src="js/p5.dom.js"></script>-->
-<!--            <script type="text/javascript" src="js/p5.sound.min.js"></script>-->
-            <script type="text/javascript" src="angular/app.js"></script>
-            <script type="text/javascript" src="angular/controller/TodoController.js"></script>
-            <script type="text/javascript" src="js/main.js"></script>
-            <script type="text/javascript" src="js/request.js">♥</script>
-        </div>
-    </body>
+    </div>
+
+    <div class="test-hover-effect"></div>
+
+    <svg width="100" height="100">
+        <circle id="svg-animate" cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow">
+            <animate attributeType="CSS" attributeName="r" from="" to="0" dur="1.5s" repeatCount="0" begin="click" fill="freeze" />
+        </circle>
+    </svg>
+
+    <svg width="500" height="210">
+        <polygon points="100,100 200,200 0,40 0,40" style="fill:lime; stroke: purple; stroke-wdith: 1">
+            <animate dur="500ms" attributeName="points" from="200,10 250,190 160,210" to="150,150 200,190 200,200" repeatCount="0" begin="click" fill="freeze" />
+        </polygon>
+    </svg>
+
+    <!--bower:js-->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/Materialize/bin/materialize.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <!--endbower-->
+
+    <!--inject:js-->
+    <script src="production/index.min.js"></script>
+    <script src="production/main.min.js"></script>
+    <script src="production/my_parser.min.js"></script>
+    <script src="production/parser.min.js"></script>
+    <script src="production/phasing.min.js"></script>
+    <script src="production/polymerize.min.js"></script>
+    <script src="production/request.min.js"></script>
+    <!--endinject-->
+</body>
+
 </html>

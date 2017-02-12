@@ -1,0 +1,159 @@
+@charset "UTF-8";
+::-webkit-scrollbar {
+  display: none; }
+
+::-webkit-input-placeholder {
+  font-size: 1.3em;
+  opacity: .8;
+  transition: ease .65s; }
+
+[placeholder]:focus::-webkit-input-placeholder {
+  opacity: 0; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0; }
+
+.intro_ {
+  font-size: 25px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #f75d5d;
+  margin: 25px 0 0 0;
+  padding: 0; }
+
+.intro_name {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px; }
+
+.addr {
+  font-size: 12px; }
+  .addr h5 {
+    font-size: 15px;
+    margin: 1px;
+    padding: 1px; }
+  .addr h4 {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 1px;
+    padding: 1px; }
+
+section h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  color: #f75d5d;
+  font-size: 25px; }
+section h5 {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  font-size: 20px; }
+section h6 {
+  font-size: 14px;
+  margin: 0; }
+section span {
+  font-style: italic;
+  font-weight: normal; }
+section ul li {
+  padding-bottom: 5px; }
+section ul li:before {
+  content: "ΓÇó";
+  font-size: 200%;
+  padding-right: 5px; }
+
+footer {
+  margin-top: 50px; }
+
+.main-controller {
+  height: 10px; }
+  .main-controller h1 {
+    text-align: center;
+    margin: 0; }
+
+.main-block {
+  margin-top: 10px; }
+
+.block {
+  min-width: 300px;
+  height: 200px;
+  margin: 1px;
+  float: left;
+  position: relative;
+  background-size: cover; }
+  .block p {
+    text-align: center; }
+
+.publisher {
+  position: absolute;
+  bottom: 0;
+  right: calc(45px + 1%);
+  background: orange;
+  color: black;
+  padding: 1px 10px 1px 3px;
+  border-radius: 5px; }
+
+.price {
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+  background: orange;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  width: 50px;
+  height: 50px; }
+
+.heading p {
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.1em; }
+.heading h1 {
+  text-align: center;
+  margin-bottom: 0; }
+
+.learning-skill {
+  font-size: 17px;
+  color: aliceblue;
+  background: gray;
+  height: auto;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 3px; }
+  .learning-skill a {
+    text-decoration: none;
+    color: aqua; }
+  .learning-skill p {
+    font-size: 14px;
+    color: aqua; }
+
+.test_div {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.portfolio {
+  font-size: 20px;
+  background: lightgray;
+  height: 40px;
+  border-radius: 5px;
+  text-align: center; }
+
+.jumbotron {
+  padding-top: 0; }
+
+#main-slide {
+  background: rgba(246, 246, 246, 0.99);
+  background: url("../assets/icymountains.jpg") no-repeat center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  height: 100vh;
+  background: url("../assets/mac.jpg") no-repeat center;
+  background-size: cover;
+  height: 35vh;
+  width: 25vw;
+  overflow: auto;
+  display: inline-block;
+  margin: 10px; }

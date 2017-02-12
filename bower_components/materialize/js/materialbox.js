@@ -4,11 +4,11 @@
 
     return this.each(function() {
 
-      if ($(this).hasClass('intialized')) {
+      if ($(this).hasClass('initialized')) {
         return;
       }
 
-      $(this).addClass('intialized');
+      $(this).addClass('initialized');
 
       var overlayActive = false;
       var doneAnimating = true;
@@ -18,16 +18,18 @@
       var placeholder = $('<div></div>').addClass('material-placeholder');
       var originalWidth = 0;
       var originalHeight = 0;
+      var ancestorsChanged;
+      var ancestor;
       origin.wrap(placeholder);
-      
-      
+
+
       origin.on('click', function(){
         var placeholder = origin.parent('.material-placeholder');
         var windowWidth = window.innerWidth;
         var windowHeight = window.innerHeight;
         var originalWidth = origin.width();
         var originalHeight = origin.height();
-        
+
 
         // If already modal, return to original
         if (doneAnimating === false) {
@@ -38,7 +40,7 @@
           returnToOriginal();
           return false;
         }
-        
+
 
         // Set states
         doneAnimating = false;
@@ -46,7 +48,6 @@
         overlayActive = true;
 
         // Set positioning for placeholder
-
         placeholder.css({
           width: placeholder[0].getBoundingClientRect().width,
           height: placeholder[0].getBoundingClientRect().height,
@@ -54,8 +55,24 @@
           top: 0,
           left: 0
         });
-        
-        
+
+        // Find ancestor with overflow: hidden; and remove it
+        ancestorsChanged = undefined;
+        ancestor = placeholder[0].parentNode;
+        var count = 0;
+        while (ancestor !== null && !$(ancestor).is(document)) {
+          var curr = $(ancestor);
+          if (curr.css('overflow') === 'hidden') {
+            curr.css('overflow', 'visible');
+            if (ancestorsChanged === undefined) {
+              ancestorsChanged = curr;
+            }
+            else {
+              ancestorsChanged = ancestorsChanged.add(curr);
+            }
+          }
+          ancestor = ancestor.parentNode;
+        }
 
         // Set css on origin
         origin.css({position: 'absolute', 'z-index': 1000})
@@ -83,7 +100,7 @@
           $photo_caption.text(origin.data('caption'));
           $('body').append($photo_caption);
           $photo_caption.css({ "display": "inline" });
-          $photo_caption.velocity({opacity: 1}, {duration: inDuration, queue: false, easing: 'easeOutQuad'})
+          $photo_caption.velocity({opacity: 1}, {duration: inDuration, queue: false, easing: 'easeOutQuad'});
         }
 
 
@@ -178,7 +195,7 @@
           var windowHeight = window.innerHeight;
           var originalWidth = origin.data('width');
           var originalHeight = origin.data('height');
-       
+
           origin.velocity("stop", true);
           $('#materialbox-overlay').velocity("stop", true);
           $('.materialbox-caption').velocity("stop", true);
@@ -235,6 +252,9 @@
               origin.removeClass('active');
               doneAnimating = true;
               $(this).remove();
+
+              // Remove overflow overrides on ancestors
+              ancestorsChanged.css('overflow', '');
             }
           });
 

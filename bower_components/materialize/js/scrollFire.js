@@ -26,44 +26,19 @@
 
             var currentElement = document.querySelector(selector);
             if ( currentElement !== null) {
-              var elementOffset = currentElement.getBoundingClientRect().top + document.body.scrollTop;
+              var elementOffset = currentElement.getBoundingClientRect().top + window.pageYOffset;
 
               if (windowScroll > (elementOffset + offset)) {
-                if (value.done != true) {
+                if (value.done !== true) {
                   var callbackFunc = new Function(callback);
                   callbackFunc();
                   value.done = true;
                 }
               }
             }
-          };
+          }
       }
     }, 100);
-
-
-    // $(window).scroll(function () {
-    //   var windowScroll = $(window).scrollTop() + $(window).height();
-
-    //   $.each( options, function( i, value ){
-    //     var selector = value.selector,
-    //         offset = value.offset,
-    //         callback = value.callback;
-
-    //     if ($(selector).length != 0) {
-    //       var elementOffset = $(selector).offset().top;
-
-    //       if (windowScroll > (elementOffset + offset)) {
-    //         if (value.done != true) {
-    //           var callbackFunc = new Function(callback);
-    //           callbackFunc();
-    //           value.done = true;
-    //         }
-    //       }
-    //     }
-
-    //   });
-    // });
-
-  }
+  };
 
 })(jQuery);

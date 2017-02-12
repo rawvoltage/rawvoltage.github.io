@@ -6,14 +6,18 @@ Materialize.toast = function (message, displayLength, className, completeCallbac
     // Create toast container if it does not exist
     if (container === null) {
         // create notification container
-        var container = document.createElement('div');
+        container = document.createElement('div');
         container.id = 'toast-container';
         document.body.appendChild(container);
     }
 
     // Select and append toast
     var newToast = createToast(message);
-    container.appendChild(newToast);
+
+    // only append toast if message is not undefined
+    if(message){
+        container.appendChild(newToast);
+    }
 
     newToast.style.top = '35px';
     newToast.style.opacity = 0;
@@ -67,8 +71,19 @@ Materialize.toast = function (message, displayLength, className, completeCallbac
                 toast.classList.add(classes[i]);
             }
         }
-        toast.innerHTML = html;
-
+        // If type of parameter is HTML Element
+        if ( typeof HTMLElement === "object" ? html instanceof HTMLElement : html && typeof html === "object" && html !== null && html.nodeType === 1 && typeof html.nodeName==="string"
+) {
+          toast.appendChild(html);
+        }
+        else if (html instanceof jQuery) {
+          // Check if it is jQuery object
+          toast.appendChild(html[0]);
+        }
+        else {
+          // Insert as text;
+          toast.innerHTML = html; 
+        }
         // Bind hammer
         var hammerHandler = new Hammer(toast, {prevent_default: false});
         hammerHandler.on('pan', function(e) {
@@ -118,4 +133,4 @@ Materialize.toast = function (message, displayLength, className, completeCallbac
 
         return toast;
     }
-}
+};

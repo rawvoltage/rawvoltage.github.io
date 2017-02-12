@@ -1,46 +1,68 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Website Template</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700' rel='stylesheet' type='text/css'>
-        
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-	</head>
-	
-	<body ng-app="myApp">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="book-store.html">Book Store</a></li>
-            </ul>
-        </nav>
-        <div ng-controller="MainController" class="main-controller">
-            <h1>
+
+<head>
+    <title>Website Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700' rel='stylesheet' type='text/css'>
+    <!--bower:css-->
+    <link rel="stylesheet" href="bower_components/Materialize/bin/materialize.css" />
+    <!--endbower-->
+
+    <!--inject:css-->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/main-sass.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/resume.css">
+    <link rel="stylesheet" href="css/todo-list.css">
+    <!--endinject-->
+</head>
+
+<body ng-app="myApp">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="book-store.html">Book Store</a></li>
+        </ul>
+    </nav>
+    <div ng-controller="MainController" class="main-controller">
+        <h1>
                 {{title}}
             </h1>
-            <div class="main-block container">
-               <h4>Created using Angular</h4>
-                <div class="block" ng-repeat="block in blocks" ng-style="{'background-image': 'url({{block.icon}})'}">
-                    <p class="block-name">
-                        {{block.name}}
-                    </p>
-                    <p class="publisher">
-                        {{block.publisher}}
-                    </p>
-                    <div class="price">
-                        <p>{{block.price | currency}}</p>
-                    </div>
+        <div class="main-block container">
+            <h4>Created using Angular</h4>
+            <div class="block" ng-class="block.order" ng-repeat="block in blocks" ng-style="{'background-image': 'url({{block.icon}})'}">
+                <p class="block-name">
+                    {{block.name}}
+                </p>
+                <p class="publisher">
+                    {{block.publisher}}
+                </p>
+                <div class="price">
+                    <p>{{block.price | currency}}</p>
                 </div>
             </div>
         </div>
-           
-        <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
-        <script type="text/javascript" src="angular/app.js"></script>
-        <script type="text/javascript" src="angular/controller/MainController.js"></script>
-	</body>
+    </div>
+    <!--bower:js-->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/Materialize/bin/materialize.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <!--endbower-->
+
+    <!--inject:js-->
+    <script type="text/javascript" src="angular/app.js"></script>
+    <script type="text/javascript" src="angular/controller/MainController.js"></script>
+    <script src="production/index.min.js"></script>
+    <script src="production/main.min.js"></script>
+    <script src="production/my_parser.min.js"></script>
+    <script src="production/parser.min.js"></script>
+    <script src="production/phasing.min.js"></script>
+    <script src="production/polymerize.min.js"></script>
+    <script src="production/request.min.js"></script>
+    <!--endinject-->
+</body>
+
 </html>

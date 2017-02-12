@@ -3,11 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="css/threes-css.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.min.js"></script>
+    <!--bower:css-->
+    <link rel="stylesheet" href="bower_components/Materialize/bin/materialize.css" />
+    <!--endbower-->
+
+    <!--inject:css-->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/main-sass.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/resume.css">
+    <link rel="stylesheet" href="css/todo-list.css">
+    <!--endinject-->
 </head>
-<script type="text/javascript" src="js/three-script.js"></script>
 <body>
-    
+     <!--bower:js-->
+     <script src="bower_components/jquery/dist/jquery.js"></script>
+     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+     <script src="bower_components/Materialize/bin/materialize.js"></script>
+     <script src="bower_components/angular/angular.js"></script>
+     <!--endbower-->
+
+    <!--inject:js-->
+    <script src="production/index.min.js"></script>
+    <script src="production/main.min.js"></script>
+    <script src="production/my_parser.min.js"></script>
+    <script src="production/parser.min.js"></script>
+    <script src="production/phasing.min.js"></script>
+    <script src="production/polymerize.min.js"></script>
+    <script src="production/request.min.js"></script>
+    <!--endinject-->
 </body>
 </html>
