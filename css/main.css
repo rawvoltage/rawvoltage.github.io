@@ -67,6 +67,11 @@ section div {
 .instagram img {
     height: 24px;
 }
+
+.recent-projects {
+    width: 10px;
+}
+
 .main-controller {
     height: 10px;
 }
