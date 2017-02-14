@@ -33,9 +33,9 @@
 
 <body>
     <div ng-app="myApp">
-        <div ng-controller="ResumeController" class="container">
+        <div ng-controller="MainController" class="container">
             <header>
-                <h1>danny valerio</h1>
+                <h1>{{title}}</h1>
 
                 <div class="social">
                     <a href="mailto:misscoollex@gmail.com" class="email">
@@ -45,52 +45,31 @@
                         <img src="/assets/instagram.png" title="instagram" alt="instagram">
                     </a>
                 </div>
-
             </header>
 
             <section class="experience">
-                <h3>Experience</h3>
                 <div>
-                    <h6>Jan 2014 - Jan 2015</h6>
-                    <h5>CVS Health - <span>Clerk/cashier</span></h5>
-                    <ul>
-                        <li>ACO Specialist, Pharmacy tech, Photo tech, Cashier, Freight receiving/stocking.</li>
-                        <li>Responsible for training new employees</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h6>Jul 2013 - Nov 2014</h6>
-                    <h5>C-Town Supermarket - <span>Clerk/cashier</span></h5>
-                    <ul>
-                        <li>Handling the cash register</li>
-                        <li>Setting up store displays</li>
-                        <li>Managed shelf stocking and pricing activities</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h6>Dec 2012 - Jul 2013</h6>
-                    <h5>McDonalds - <span>Crew Member</span></h5>
-                    <ul>
-                        <li>Providing customer service at cash register</li>
-                        <li>Handling the grill and preparing the food.</li>
-                        <li>Janitorial work; cleaning the grill after every use, sweeping/mopping the floors, cleaning work area, dishwashing</li>
-                    </ul>
+                    <p>
+                        current project
+                    </p>
                 </div>
             </section>
 
             <section class="education">
-                <h3>Education</h3>
-                <h6>April 2010 - June 2012</h6>
-                <h5>HACC Community College - <span>Psychology Associates</span></h5>
-                <h6>Nov 2014 - Feb 2015</h6>
-                <h5>General Assembly - <span>Front-end Web Development Certificate</span></h5>
+                <div>
+                    test 2
+                </div>
+            </section>
+            
+            <section class="">
+                <div>
+                    test 3
+                </div>
             </section>
         </div>
     </div>
 
-
+<!--
     <nav>
         <ul class="right hide-on-med-and-down">
             <li><a href="#!">First Sidebar Link</a></li>
@@ -102,7 +81,9 @@
         </ul>
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
     </nav>
+-->
 
+<!--
     <footer>
         <nav>
             <ul>
@@ -111,12 +92,15 @@
             </ul>
         </nav>
     </footer>
+-->
 
     <!--bower:js-->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/Materialize/bin/materialize.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="angular/app.js"></script>
+    <script src="angular/controller/MainController.js"></script>
     <!--endbower-->
 
     <!--inject:js-->
