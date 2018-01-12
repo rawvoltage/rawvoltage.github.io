@@ -38,7 +38,7 @@
                 <h1>{{title}}</h1>
 
                 <div class="social">
-                    <a href="mailto:misscoollex@gmail.com" class="email">
+                    <a href="mailto:dannyavalerio@gmail.com" class="email">
                         <img src="/assets/email.png" title="email" alt="email">
                     </a>
                     <a href="https://instagram.com/raw.voltage" class="instagram">
@@ -49,9 +49,9 @@
 
             <section class="recent-projects">
                 <div ng-repeat="block in blocks">
-                    <p>
-                        {{block.name}}
-                    </p>
+                    <a ng-href="{{block.url}}">
+                        <img ng-src="assets/{{block.img}}" alt="">
+                    </a>
                 </div>
             </section>
         </div>

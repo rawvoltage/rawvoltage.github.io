@@ -38,16 +38,15 @@ form h1 {
 
 section {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 section div {
-    border: 1px solid black;
+/*    border: 1px solid black;*/
     height: 275px;
     width: 275px;
     margin: 20px;
-    display: flex;
-    justify-content: center;
     
 }
 
@@ -69,7 +68,14 @@ section div {
 }
 
 .recent-projects {
-    width: 10px;
+/*    width: 1000px;*/
+    width: 90%;
+}
+
+.recent-projects img {
+    object-fit: cover;
+    height: 275px;
+    width: 275px;;
 }
 
 .main-controller {
