@@ -4,82 +4,67 @@
 <head>
     <title>Website Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <div class="fonts">
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700' rel='stylesheet' type='text/css'>
-    </div>
-    <div class="imports">
-        <link rel="import" href="elements/my-element.html">
-        <link rel="import" href="elements/todo-list.html">
-    </div>
-    <!--bower:css-->
-    <link rel="stylesheet" href="bower_components/Materialize/bin/materialize.css" />
-    <!--endbower-->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 
-    <!--inject:css-->
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/main-sass.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/resume.css">
     <link rel="stylesheet" href="css/todo-list.css">
-    <!--endinject-->
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="book-store.html">Book Store</a></li>
-            <li><a href="server.html">Server</a></li>
-        </ul>
-    </nav>
-    <div ng-app="myApp">
-        <div ng-controller="TodoController" class="container">
-            <form action="">
-                <ul class="collection with-header row todo-list">
-                    <li class="collection-header col s8 l10">
-                        <input type="text" name="" class="new-todo-field">
-                    </li>
-                    <li class="collection-item col s4 submit-container">
-                        <input type="button" class="btn submit-button" value="SUBMIT">
-                    </li>
-                    <li class="collection-item col s12 todo todo-footer">
-                        test
-                    </li>
-                </ul>
-            </form>
+    <header class="jumbotron">
+        <div class="container">
+            <br>
+            <h1>danny valerio</h1>
+
+            <div class="social">
+                <a href="mailto:dannyavalerio@gmail.com" class="email">
+                    <img src="/assets/email.png" title="email" alt="email">
+                </a>
+                <a href="https://instagram.com/raw.voltage" class="instagram">
+                    <img src="/assets/instagram.png" title="instagram" alt="instagram">
+                </a>
+            </div>
+
+            <p class="description">
+                aspiring web dev interested in the MEAN stack.
+            </p>
         </div>
+<!--
+        <nav class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="book-store.html">Book Store</a></li>
+                <li><a href="server.html">Server</a></li>
+            </ul>
+        </nav>
+-->
+    </header>
+    <div class="container">
+        <form action="">
+            <input id="name" type="text" name="" class="form-control">
+            <br>
+            <textarea id="message" type="text" class="form-control"></textarea>
+            <br>
+            <input type="button" class="btn btn-success"  id="send" value="SUBMIT">
+        </form>
+    </div>
+    <br>
+    <div id="messages" class="container">
+        
     </div>
 
-    <div class="test-hover-effect"></div>
-
-    <svg width="100" height="100">
-        <circle id="svg-animate" cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow">
-            <animate attributeType="CSS" attributeName="r" from="" to="0" dur="1.5s" repeatCount="0" begin="click" fill="freeze" />
-        </circle>
-    </svg>
-
-    <svg width="500" height="210">
-        <polygon points="100,100 200,200 0,40 0,40" style="fill:lime; stroke: purple; stroke-wdith: 1">
-            <animate dur="500ms" attributeName="points" from="200,10 250,190 160,210" to="150,150 200,190 200,200" repeatCount="0" begin="click" fill="freeze" />
-        </polygon>
-    </svg>
-
-    <!--bower:js-->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/Materialize/bin/materialize.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <!--endbower-->
-
-    <!--inject:js-->
-    <script src="production/index.min.js"></script>
-    <script src="production/main.min.js"></script>
-    <script src="production/my_parser.min.js"></script>
-    <script src="production/parser.min.js"></script>
-    <script src="production/phasing.min.js"></script>
-    <script src="production/polymerize.min.js"></script>
-    <script src="production/request.min.js"></script>
-    <!--endinject-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    
+<!--    <script src="/js/index.js"></script>-->
+   <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/script.js"></script>
+<!--    <script src="/js/main.js"></script>-->
+<!--    <script src="/js/Node/my_parser.js"></script>-->
+<!--    <script src="/js/Node/parser.js"></script>-->
+    <script src="/js/Node/request.js"></script>
 </body>
 
 </html>

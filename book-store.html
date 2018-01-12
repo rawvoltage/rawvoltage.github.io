@@ -6,63 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700' rel='stylesheet' type='text/css'>
-    <!--bower:css-->
-    <link rel="stylesheet" href="bower_components/Materialize/bin/materialize.css" />
-    <!--endbower-->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 
-    <!--inject:css-->
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/main-sass.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/resume.css">
-    <link rel="stylesheet" href="css/todo-list.css">
-    <!--endinject-->
 </head>
 
-<body ng-app="myApp">
+<body>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="book-store.html">Book Store</a></li>
         </ul>
     </nav>
-    <div ng-controller="BookController" class="main-controller">
+    <div class="main-controller">
         <h1>
-                {{title}}
-            </h1>
+            book store
+        </h1>
         <div class="main-block container">
             <h4>Created using Angular</h4>
-            <div class="block" ng-class="block.order" ng-repeat="block in blocks" ng-style="{'background-image': 'url({{block.icon}})'}">
+            <div class="block" class="block.order">
                 <p class="block-name">
-                    {{block.name}}
+                    book name
                 </p>
                 <p class="publisher">
-                    {{block.publisher}}
+                    book publisher
                 </p>
                 <div class="price">
-                    <p>{{block.price | currency}}</p>
+                    <p>book price</p>
                 </div>
             </div>
         </div>
     </div>
-    <!--bower:js-->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/Materialize/bin/materialize.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <!--endbower-->
-
-    <!--inject:js-->
-    <script type="text/javascript" src="angular/app.js"></script>
-    <script type="text/javascript" src="angular/controller/MainController.js"></script>
-    <script src="production/index.min.js"></script>
-    <script src="production/main.min.js"></script>
-    <script src="production/my_parser.min.js"></script>
-    <script src="production/parser.min.js"></script>
-    <script src="production/phasing.min.js"></script>
-    <script src="production/polymerize.min.js"></script>
-    <script src="production/request.min.js"></script>
-    <!--endinject-->
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>

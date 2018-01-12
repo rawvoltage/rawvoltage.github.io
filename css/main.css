@@ -29,6 +29,8 @@ body {
 
 h1 {
     text-align: center;
+    display: inline-block;
+    
 }
 
 form h1 {
@@ -54,9 +56,10 @@ section div {
 /* classes */
 /**************************************/
 .social {
-    position: absolute;
+    float: right;
+    position: relative;
     top: 10px;
-    right: 10px;
+    right: -15px;
 }
 
 .email img {
