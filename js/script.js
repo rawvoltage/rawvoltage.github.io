@@ -20,5 +20,5 @@ function getMessages() {
 }
 
 function postMessage(message) {
-    $.post('http://localhost:3000/messages', message)
+    $.post('https://nodevoltage.herokuapp.com/messages', message)
 }
