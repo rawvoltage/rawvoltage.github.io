@@ -1,11 +1,11 @@
-var express = require('express')
-var bodyParser = require('body-parser')
+const express = require('express')
+const bodyParser = require('body-parser')
 
-var app = express()
+const app = express()
 
-var http = require('http').Server(app)
-var io = require('socket.io')(http)
-var mongoose = require('mongoose')
+const http = require('http').Server(app)
+const io = require('socket.io')(http)
+const mongoose = require('mongoose')
 
 app.use(express.static(__dirname))
 app.use(bodyParser.json())
@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 mongoose.Promise = Promise;
 
-var dbUrl = "mongodb://user:password@ds151207.mlab.com:51207/my1stdb";
+const dbUrl = "mongodb://user:password@ds151207.mlab.com:51207/my1stdb";
 
 var Message = mongoose.model('Message', {
     name: String,
@@ -47,6 +47,6 @@ mongoose.connect(dbUrl, {useMongoClient: true}, (err) => {
     console.log('mongo db connection', err)
 })
 
-var server = http.listen(process.env.PORT || 3000, () => {
+const server = http.listen(process.env.PORT || 3000, () => {
     console.log('server is listening on port', server.address().port, app.settings.env)
 })
