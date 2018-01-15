@@ -11,7 +11,7 @@ app.use(express.static(__dirname))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
-//mongoose.Promise = Promise;
+mongoose.Promise = Promise;
 
 var dbUrl = "mongodb://user:password@ds151207.mlab.com:51207/my1stdb";
 
@@ -48,5 +48,5 @@ mongoose.connect(dbUrl, {useMongoClient: true}, (err) => {
 })
 
 var server = http.listen(process.env.PORT || 3000, () => {
-    console.log('server is listening on port', server.address().port)
+    console.log('server is listening on port', server.address().port, app.settings.env)
 })
