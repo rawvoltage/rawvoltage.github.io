@@ -14,11 +14,11 @@ function addMessage(message) {
 }
 
 function getMessages() {
-    $.get('https://nodevoltage.herokuapp.com/messages', (data) => {
+    $.get('./messages', (data) => {
         data.forEach(addMessage)
     })
 }
 
 function postMessage(message) {
-    $.post('https://nodevoltage.herokuapp.com/messages', message)
+    $.post('./messages', message)
 }
