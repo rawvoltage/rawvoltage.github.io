@@ -14,7 +14,7 @@ function addMessage(message) {
 }
 
 function getMessages() {
-    $.get('http://localhost:3000/messages', (data) => {
+    $.get('https://nodevoltage.herokuapp.com/messages', (data) => {
         data.forEach(addMessage)
     })
 }
