@@ -1,4 +1,4 @@
-var socket = io()
+const socket = io()
 $(() => {
     $("#send").click(() => {
         var message = {name: $("#name").val(), message: $("#message").val()}
