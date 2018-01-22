@@ -1,20 +1,28 @@
 //const socket = io()
 const express = require('express')
-const bodyParser = require('body-parser')
+//const bodyParser = require('body-parser')
 
 const app = express()
 
 const http = require('http').Server(app)
-const io = require('socket.io')(http)
+//const io = require('socket.io')(http)
 
-app.use(express.static(__dirname))
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extended: false}))
+const port = process.env.PORT || 3000;
+const url = "https://api.telegra.ph/getViews/";
 
-app.get('https://api.telegra.ph/getViews/My-Cry-for-Help-01-03', (data) => {
-    console.log('test')
+//app.use(express.static(__dirname))
+//app.use(bodyParser.json())
+//app.use(bodyParser.urlencoded({extended: false}))
+
+app.get(url, (data) => {
+    console.log(url)
 })
 
-app.get('https://api.telegra.ph/getViews/My-Cry-for-Help-01-03', (req, res) => {
-    console.log('test')
-})
+//app.post(url, (e, r, b) => {
+//    let json = JSON.parse(b);
+//    console.log('test');
+//})
+//
+//const server = http.listen(port, () => {
+//    console.log('server is listening on port', server.address().port, app.settings.env)
+//})
